@@ -1,0 +1,125 @@
+.stack {
+  padding: 80px 80px;
+}
+
+.titlepage {
+  padding: 160px 80px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a.gray {
+  color: #ccc;
+}
+
+ul.small {
+  font-size: 36px;
+  color: #969696;
+}
+
+.big {
+  font-size: 128px;
+}
+
+.caption {
+  font-size: 96px;
+  text-align: center;
+  text-shadow: 0px 2px 6px rgba(0,0,0,.5);
+}
+
+code {
+  font-size: 36px;
+}
+
+code.small {
+  font-size: 26px;
+}
+
+.stack {
+  height: 960px;
+  width: 1280px;
+}
+
+body {
+  height: 960px;
+  width: 1280px;
+}
+
+.reversecolor {
+  background-color: #fff;
+}
+.reversecolor text {
+  color: #000;
+}
+.reversecolor h2 {
+  color: #000;
+}
+
+  .axis path,
+  .axis line {
+     fill: none;
+     stroke: #fff;
+     shape-rendering: crispEdges;
+   }
+   .axis text {
+     font-family: sans-serif;
+     font-size: 22px;
+     fill: #fff;
+   }
+
+   #bgrect {
+     fill: rgb(230,230,230);
+     stroke: #fff;
+   }
+
+   .axislabel {
+      font-family: sans-serif;
+      font-size: 24px;
+      fill: rgb(125,250,125);
+   }
+
+   #tooltip {
+      font-size: 24px;
+    }
+
+.highlight {
+  color: rgb(125,250,125);
+}
+
+.glow {
+  color: rgb(175,255,175);
+  text-shadow: 0 0 50px #0af, 0 0 3px #fff;
+}
+
+p {
+  padding: 5px 30px;
+  font-size: 32px;
+}
+
+.nopadding {
+  padding: 0px 0px;
+}
+
+.chart {
+  text-align: center;
+}
+
+.sperm ellipse {
+  fill: #fff;
+}
+
+.sperm path {
+  fill: none;
+  stroke: #fff;
+  stroke-linecap: round;
+}
+
+.sperm_mid {
+ stroke-width: 4px;
+}
+
+.sperm_tail {
+  stroke-width: 2px;
+}
