@@ -11,7 +11,11 @@ a {
 }
 
 a.gray {
-  color: #ccc;
+  color: #969696;
+}
+
+font.gray {
+  color: #969696;
 }
 
 ul {
