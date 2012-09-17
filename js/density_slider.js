@@ -160,8 +160,7 @@ var n_xTicks = 6, n_yTicks = 7;
        .attr("stroke-width", 3)
        .attr("d", line(densityEstimate(mixData, bandwidth, xMin, xMax, nPoints)));
 
-  var bwtext = d3.select("body").selectAll("#bandwidth")
-    .data([ bandwidth ]);
+  var bwtext = d3.select("body").selectAll("#bandwidth");
 
   d3.select("input[type=range]").on("change", function() {
        bandwidth = Math.pow(10, this.value);
