@@ -14,6 +14,11 @@ a.gray {
   color: #ccc;
 }
 
+ul {
+  margin-left: 120px;
+  line-height: 160%;
+}
+
 ul.small {
   font-size: 36px;
   color: #969696;
