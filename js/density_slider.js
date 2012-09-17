@@ -1,3 +1,6 @@
+// example of density estimate using slider for bandwidth
+// used plotframe.coffee
+
 (function(){
 
 var mixData = [ 23.78, 28.677, 25.292, 26.731, 27, 27.821, 28.406, 20.756, 21.481,
