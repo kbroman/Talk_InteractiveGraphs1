@@ -48,9 +48,11 @@ var mixData = [ 23.78, 28.677, 25.292, 26.731, 27, 27.821, 28.406, 20.756, 21.48
             30.68, 28.627, 34.426, 34.089, 36.252, 36.342, 36.051, 33.149, 33.698,
             40.206, 35.501, 39.233 ];
 
+// function for printing rounded numbers
 var twodigits = d3.format(".2f");
 var threedigits = d3.format(".3f");
 
+// variables I'll use for density estimate
 var bandwidth = 1;
 var nPoints = 250;
 var xMin = 10;
@@ -63,98 +65,45 @@ function dnorm(x)
 }
 
 // calculate density estimate
-function densityEstimate(data, bw, minx, maxx, numPoints)
+function densityEstimate(data, bw, minx, maxx, numpoints)
 {
   var xy = [];
-  for(var i=0; i < nPoints; i++) {
-    xy[i] = [minx + (maxx-minx)*i/numPoints, 0];
+  for(var i=0; i < numpoints; i++) {
+    xy[i] = { "x": minx + (maxx-minx)*i/numpoints, "y":0.0 };
   }
-  for(var i=0; i<numPoints; i++) {
+  for(var i=0; i<numpoints; i++) {
     for(var j=0; j < data.length; j++) {
-      xy[i][1] += dnorm((xy[i][0]-data[j])/bw)/bw/data.length;
+      xy[i].y += dnorm((xy[i].x-data[j])/bw)/bw/data.length;
     }
   }
   return xy;
 }
 
 
-
-var w=800, h=500;
-var pad = {bottom:90, left:100, top:0, right:10, internal:10}
-var n_xTicks = 6, n_yTicks = 7;
-
-  var svg = d3.select("#density_estimate")
-              .append("svg")
-                .attr("width", w)
-                .attr("height", h);
-
-  var yMin = 0;
-  var yMax = 0.11;
-
-  xScale=d3.scale.linear().domain([xMin, xMax])
-                          .range([pad.left+pad.internal, w-pad.right-pad.internal]);
-  yScale=d3.scale.linear().domain([yMin, yMax])
-                          .range([h-pad.bottom-pad.internal, pad.top+pad.internal]);
-
-  svg.append("rect")
-       .attr("id", "bgrect")
-       .attr("x", pad.left).attr("y",pad.top)
-       .attr("width", w-(pad.left+pad.right))
-       .attr("height",h-(pad.top+pad.bottom))
-
-  var xAxis = d3.svg.axis().scale(xScale).orient("bottom").ticks(n_xTicks).tickSize(0,0,0);
-  var yAxis = d3.svg.axis().scale(yScale).orient("left").ticks(n_yTicks).tickSize(0,0,0);
-
-  var xTicks = xScale.ticks(n_xTicks);
-  svg.selectAll("#verline")
-      .data(xTicks)
-      .enter()
-      .append("line")
-      .attr("x1", function(d) { return xScale(d); })
-      .attr("x2", function(d) { return xScale(d); })
-      .attr("id", "verline")
-      .attr("fill", "none")
-      .attr("stroke", "white")
-      .attr("y1", pad.top)
-      .attr("y2", h-pad.bottom);
-
-  var yTicks = yScale.ticks(n_yTicks);
-  svg.selectAll("#horline")
-      .data(yTicks)
-      .enter()
-      .append("line")
-      .attr("y1", function(d) { return yScale(d); })
-      .attr("y2", function(d) { return yScale(d); })
-      .attr("id", "horline")
-      .attr("fill", "none")
-      .attr("stroke", "white")
-      .attr("x1", pad.left)
-      .attr("x2", w-pad.right);
-
-  svg.append("g")
-       .attr("class", "axis")
-       .attr("transform", "translate(0," + (h - pad.bottom) + ")")
-       .call(xAxis);
+// plot frame and get scales
+svgscale = plotframe(densityEstimate(mixData, 0.1, xMin, xMax, nPoints),
+                     { chartname: "#density_estimate",
+                       xlab: "",
+                       ylab: "",
+                       pad: {
+                           bottom: 90,
+                           left: 100,
+                           top: 0,
+                           right: 10,
+                           scale: 0.05
+                           },
+                       tickPadding: 8,
+                       ylab_rotate: 0
+                       });
 
 
-  svg.append("g")
-       .attr("class", "axis")
-       .attr("transform", "translate(" + pad.left + ",0)")
-       .call(yAxis);
-
-  svg.append("rect")
-       .attr("x", pad.left).attr("y",pad.top)
-       .attr("width", w-(pad.left+pad.right))
-       .attr("height",h-(pad.top+pad.bottom))
-       .attr("fill", "none")
-       .attr("stroke", "black");
 
   var line = d3.svg.line()
-                 .x(function(d) { return xScale(d[0]); })
-                 .y(function(d) { return yScale(d[1]); })
+                 .x(function(d) { return svgscale.x(d.x); })
+                 .y(function(d) { return svgscale.y(d.y); })
                  .interpolate("linear");
 
-  var path = svg.append("svg:path")
+  var path = svgscale.svg.append("svg:path")
        .attr("fill", "none")
        .attr("stroke","slateblue")
        .attr("stroke-width", 3)
