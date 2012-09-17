@@ -1,6 +1,8 @@
+# Scatterplot example
 # uses plotframe.coffee
 
-weights = [
+(( ->
+ weights = [
             { x:22.60, y:21.61, sex:"FEMALE", id:  1},
             { x:34.79, y:34.12, sex:"MALE",   id:  2},
             { x:19.77, y:19.40, sex:"MALE",   id:  3},
@@ -168,10 +170,10 @@ weights = [
             { x:29.46, y:29.22, sex:"MALE",   id:165}
           ]
 
-svgscale = plotframe weights, {chartname: "#plotframe", xlab:"Weight 1", ylab:"Weight 2", height: 600, width: 620, 
-pad: {bottom: 90, left: 100, top: 0, right: 10, scale: 0.05}, tickPadding: 8}
+ svgscale = plotframe weights, {chartname: "#scatterplot", xlab:"Weight 1", ylab:"Weight 2", height: 600, width: 620,
+ pad: {bottom: 90, left: 100, top: 0, right: 10, scale: 0.05}, tickPadding: 8}
 
-svgscale.svg.selectAll("circle", {chartname: "#plotframe"})
+ svgscale.svg.selectAll("circle", {chartname: "#scatterplot"})
    .data(weights)
    .enter()
    .append("circle")
@@ -187,3 +189,5 @@ svgscale.svg.selectAll("circle", {chartname: "#plotframe"})
       .attr("x", svgscale.x(d.x)+10).attr("y", svgscale.y(d.y)).attr("fill","black")
       .attr("opacity",0).style("font-family", "sans-serif").transition().attr("opacity", 1))
    .on("mouseout", -> d3.select(this).transition().duration(500).attr("fill", "slateblue"); d3.selectAll("#tooltip").transition().duration(500).attr("opacity",0).remove())
+
+))()
