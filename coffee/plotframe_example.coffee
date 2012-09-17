@@ -5,7 +5,7 @@ for i,d of dat
   d.y += d.x
 
 svgscale = plotframe dat, {chartname: "#plotframe", xlab: "X", ylab: "Y",
-pad: {bottom: 90, left: 100, top: 3, right: 3, scale: 0.05}, tickPadding: 8, ylab_rotate: 0}
+pad: {bottom: 90, left: 100, top: 0, right: 10, scale: 0.05}, tickPadding: 8, ylab_rotate: 0}
 
 svgscale.svg.selectAll("circle", {chartname: "#plotframe"})
    .data(dat)
