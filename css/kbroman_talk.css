@@ -57,32 +57,34 @@ body {
   color: #000;
 }
 
-  .axis path,
-  .axis line {
-     fill: none;
-     stroke: #fff;
-     shape-rendering: crispEdges;
-   }
-   .axis text {
-     font-family: sans-serif;
-     font-size: 22px;
-     fill: #fff;
-   }
+.axis path,
+.axis line {
+   fill: none;
+   stroke: #fff;
+   shape-rendering: crispEdges;
+ }
 
-   #bgrect {
-     fill: rgb(230,230,230);
-     stroke: #fff;
-   }
+.axis text {
+  font-family: sans-serif;
+  font-size: 22px;
+  fill: #fff;
+}
 
-   .axislabel {
-      font-family: sans-serif;
-      font-size: 24px;
-      fill: rgb(125,250,125);
-   }
+#bgrect {
+  fill: rgb(190,190,190);
+  background-color: rgb(190,190,190);
+  stroke: #fff;
+}
 
-   #tooltip {
-      font-size: 24px;
-    }
+.axislabel {
+   font-family: sans-serif;
+   font-size: 24px;
+   fill: rgb(125,250,125);
+}
+
+#tooltip {
+   font-size: 24px;
+ }
 
 .highlight {
   color: rgb(125,250,125);

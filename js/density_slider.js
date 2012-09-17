@@ -98,10 +98,10 @@ var onedigit = d3.format(".1f");
                           .range([h-pad.bottom-pad.internal, pad.top+pad.internal]);
 
   svg.append("rect")
+       .attr("id", "bgrect")
        .attr("x", pad.left).attr("y",pad.top)
        .attr("width", w-(pad.left+pad.right))
        .attr("height",h-(pad.top+pad.bottom))
-       .attr("fill", "rgb(230,230,230)");
 
   var xAxis = d3.svg.axis().scale(xScale).orient("bottom").ticks(n_xTicks).tickSize(0,0,0);
   var yAxis = d3.svg.axis().scale(yScale).orient("left").ticks(n_yTicks).tickSize(0,0,0);
