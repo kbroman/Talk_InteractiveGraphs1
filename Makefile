@@ -1,10 +1,10 @@
-all: js/plotframe.js js/scatterplot_example.js
+all: js/plotframe.js js/scatterplot.js
 
 js/plotframe.js: coffee/plotframe.coffee
 	coffee -bc -o js coffee/plotframe
 
-js/scatterplot_example.js: coffee/scatterplot_example.coffee
-	coffee -bc  -o js coffee/scatterplot_example
+js/scatterplot.js: coffee/scatterplot.coffee
+	coffee -bc  -o js coffee/scatterplot
 
 web:
 	scp index.html adhara:public_html/D3/DynamicGraphs/
