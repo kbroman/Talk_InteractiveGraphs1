@@ -44,7 +44,6 @@ font.vsmall {
 
 ul {
   margin-left: 120px;
-  line-height: 160%;
 }
 
 ul.small {
@@ -57,7 +56,22 @@ ul.small ul {
   font-size: 28px;
 }
 
+li {
+  margin-bottom: 30px;
+}
 
+ul.tight {
+  font-size: 36px;
+  color: #969696;
+}
+
+ul.tight li {
+  margin-bottom: 14px;
+}
+
+li li {
+  margin-bottom: 8px;
+}
 
 
 
