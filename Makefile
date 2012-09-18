@@ -11,3 +11,5 @@ web:
 	scp js/*.js adhara:public_html/D3/DynamicGraphs/js/
 	scp css/*.css adhara:public_html/D3/DynamicGraphs/css/
 
+webexamples:
+	scp examples/* adhara:public_html/D3/DynamicGraphs/examples/
