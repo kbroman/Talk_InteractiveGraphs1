@@ -55,7 +55,7 @@
               39.108, 34.166, 29.236, 29.524, 35.14, 37.54, 35.983, 18.548,
               36.712, 25.422, 29.233, 32.433, 24.44, 23.872 ]
   
-  # function for printing rounded numbers
+  # functions for printing rounded numbers
   twodigits = d3.format ".2f"
   threedigits = d3.format ".3f"
   
@@ -77,7 +77,7 @@
     for i in [0...numpoints]
       for j in [0...data.length]
         xy[i].y += dnorm((xy[i].x-data[j])/bw)/bw/data.length
-    xy;
+    xy
   
   
   args = 
@@ -94,7 +94,7 @@
     ylab_rotate: 0
 
   # plot frame and get scales
-  svgscale = plotframe(densityEstimate(mixData, 0.1, xMin, xMax, nPoints), args)
+  svgscale = plotframe densityEstimate(mixData, 0.1, xMin, xMax, nPoints), args
   
   line = d3.svg.line()
            .x((d) -> svgscale.x(d.x))
