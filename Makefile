@@ -1,9 +1,12 @@
-all: js/plotframe.js js/scatterplot.js
+all: js/plotframe.js js/scatterplot.js js/density.js
 
 js/plotframe.js: coffee/plotframe.coffee
 	coffee -bco js coffee
 
 js/scatterplot.js: coffee/scatterplot.coffee
+	coffee -bco js coffee
+
+js/density.js: coffee/density.coffee
 	coffee -bco js coffee
 
 web:

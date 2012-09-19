@@ -5,5 +5,6 @@ R/.RData
 js/d3.v2.min.js
 js/plotframe.js
 js/scatterplot.js
+js/density.js
 examples/*.png
 examples/clean_genotypes.*

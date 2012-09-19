@@ -1,5 +1,4 @@
 # function to create background, axes, and axis labels
-plotframe = null
 plotframe = (data, args=null, svgscale={svg:null, x:null, y:null}) ->
   # default name to place chart
   chartname = args?.chartname ? "body"
