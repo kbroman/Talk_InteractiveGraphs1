@@ -17,8 +17,11 @@ webcode:
 	scp js/*.js adhara:public_html/presentations/DynamicGraphs/js/
 	scp coffee/*.coffee adhara:public_html/presentations/DynamicGraphs/coffee/
 
+webdata:
+	scp data/*.json adhara:public_html/presentations/DynamicGraphs/data/
+
 webex:
 	scp examples/*.png adhara:public_html/presentations/DynamicGraphs/examples/
 	scp examples/*.html adhara:public_html/presentations/DynamicGraphs/examples/
 
-web: webmain webcode webex
+web: webmain webcode webex webdata
