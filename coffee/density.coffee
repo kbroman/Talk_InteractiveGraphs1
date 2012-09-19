@@ -110,14 +110,13 @@
   bwtext = d3.select("body")
              .selectAll("#bandwidth")
   
-  d3.select("input[type=range]").on("change", ->
+  d3.select("input[type=range]").on "change", ->
          bandwidth = Math.pow(10, this.value)
          path.transition().attr("d", line(densityEstimate(mixData, bandwidth, xMin, xMax, nPoints)))
          if bandwidth > 0.095
            bwtext.transition().text("Bandwidth = " + twodigits(bandwidth))
          else
            bwtext.transition().text("Bandwidth = " + threedigits(bandwidth))
-      )
 
 ))()
   
