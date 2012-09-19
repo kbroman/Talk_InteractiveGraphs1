@@ -19,12 +19,12 @@
                                 "hotpink"
                            else
                                 "slateblue")
-      .on "mouseover", -> d3.select(this).transition().attr("fill", "black")
-      .on "mouseover.tooltip", (d,i) -> svgscale.svg.append("text").text(i+1).attr("id", "tooltip")
+      .on("mouseover", -> d3.select(this).transition().attr("fill", "black"))
+      .on("mouseover.tooltip", (d,i) -> svgscale.svg.append("text").text(i+1).attr("id", "tooltip")
          .attr("x", svgscale.x(d.x)+10).attr("y", svgscale.y(d.y)).attr("fill","black")
-         .attr("opacity",0).style("font-family", "sans-serif").transition().attr("opacity", 1)
-      .on "mouseout", ->
+         .attr("opacity",0).style("font-family", "sans-serif").transition().attr("opacity", 1))
+      .on("mouseout", ->
             d3.select(this).transition().duration(500).attr("fill", "slateblue")
-            d3.selectAll("#tooltip").transition().duration(500).attr("opacity",0).remove()
+            d3.selectAll("#tooltip").transition().duration(500).attr("opacity",0).remove())
 
 ))()
