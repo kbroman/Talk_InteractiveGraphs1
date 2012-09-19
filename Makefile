@@ -9,9 +9,16 @@ js/scatterplot.js: coffee/scatterplot.coffee
 js/density.js: coffee/density.coffee
 	coffee -bco js coffee
 
-web:
+webmain:
 	scp index.html adhara:public_html/presentations/DynamicGraphs/
-	scp js/*.js adhara:public_html/presentations/DynamicGraphs/js/
 	scp css/*.css adhara:public_html/presentations/DynamicGraphs/css/
+
+webcode:
+	scp js/*.js adhara:public_html/presentations/DynamicGraphs/js/
+	scp coffee/*.coffee adhara:public_html/presentations/DynamicGraphs/coffee/
+
+webex:
 	scp examples/*.png adhara:public_html/presentations/DynamicGraphs/examples/
 	scp examples/*.html adhara:public_html/presentations/DynamicGraphs/examples/
+
+web: webmain webcode webex
