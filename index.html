@@ -23,7 +23,7 @@
 
 <section class="titlepage">
 <h2 class="highlight">Why aren't all of our graphs
-<font id="throb" class="glow">interactive</font>?</h2>
+<font id="flash" class="glow">interactive</font>?</h2>
 
 <h4><a href="http://www.biostat.wisc.edu/~kbroman">Karl Broman</a></h4>
 <p class="nopadding">Biostatistics &amp; Medical Informatics, University of Wisconsin
@@ -33,23 +33,25 @@
 class="gray">http://www.biostat.wisc.edu/~kbroman</a></code>
 
 <script type="text/javascript">
-var throbText = d3.select("body").select("#throb");
+var flashText = d3.select("body").select("#flash");
 
 var flashToggle = 0; // when flashing, keeps track of on/off
 var stateToggle = 0; // goes between 0 (off), 1 (on) and 2 (flashing)
 
 var flashFunc =
       function() {
-        throbText.attr("class", function() {
-          if(flashToggle==0) return "glow";
-          else return("highlight"); });
+        flashText.attr("class", function() {
+          if(flashToggle==5) {
+            flashToggle=-1;
+            return("highlight"); }
+          else return("glow"); });
 
-        flashToggle = 1 - flashToggle;
+        flashToggle++;
       };
 
-var flashInterval = setInterval(flashFunc, 1500);
+var flashInterval = setInterval(flashFunc, 400);
 
-throbText.on("click", function() {
+flashText.on("click", function() {
     if(stateToggle==0) {
       clearInterval(flashInterval);
       d3.select(this).attr("class", "highlight");
@@ -60,7 +62,7 @@ throbText.on("click", function() {
     else {
       d3.select(this).attr("class", "highlight");
       flashToggle = 0;
-      flashInterval = setInterval(flashFunc, 1500);
+      flashInterval = setInterval(flashFunc, 400);
     }
     stateToggle++;
     if(stateToggle > 2) stateToggle = 0;
