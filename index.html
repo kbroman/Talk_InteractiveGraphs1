@@ -23,7 +23,7 @@
 
 <section class="titlepage">
 <h2 class="highlight">Why aren't all of our graphs
-<font class="glow">interactive</font>?</h2>
+<font id="throb" class="glow">interactive</font>?</h2>
 
 <h4><a href="http://www.biostat.wisc.edu/~kbroman">Karl Broman</a></h4>
 <p class="nopadding">Biostatistics &amp; Medical Informatics, University of Wisconsin
@@ -31,6 +31,41 @@
 
 <code><a href="http://www.biostat.wisc.edu/~kbroman"
 class="gray">http://www.biostat.wisc.edu/~kbroman</a></code>
+
+<script type="text/javascript">
+var throb = d3.select("body").select("#throb");
+
+var toggle1 = 0;
+var toggle2 = 0;
+
+var flashing =
+      function() {
+        throb.attr("class", function() {
+          if(toggle1==0) return "glow";
+          else return("highlight"); });
+
+        toggle1 = 1 - toggle1;
+      };
+
+var flash = setInterval(flashing, 1500);
+
+throb.on("click", function() {
+    if(toggle2==0) {
+      clearInterval(flash);
+      d3.select(this).attr("class", "highlight");
+    }
+    else if(toggle2==1) {
+      d3.select(this).attr("class", "glow");
+    }
+    else {
+      toggle1 = 0;
+      flash = setInterval(flashing, 1500);
+    }
+    toggle2++;
+    if(toggle2 > 2) toggle2 = 0;
+});
+</script>
+
 </section>
 
 
