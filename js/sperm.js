@@ -1,6 +1,6 @@
 
 var w = 1280,
-    h = 900,
+    h = 960,
     n = 30,
     m = 12,
     degrees = 180 / Math.PI;
