@@ -1,4 +1,4 @@
-all: js/plotframe.js js/scatterplot.js js/density.js
+js: js/plotframe.js js/scatterplot.js js/density.js
 
 js/plotframe.js: coffee/plotframe.coffee
 	coffee -bco js coffee
@@ -8,6 +8,8 @@ js/scatterplot.js: coffee/scatterplot.coffee
 
 js/density.js: coffee/density.coffee
 	coffee -bco js coffee
+
+all: js web
 
 webmain:
 	scp index.html adhara:public_html/presentations/DynamicGraphs/
