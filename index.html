@@ -58,6 +58,7 @@ throbText.on("click", function() {
       d3.select(this).attr("class", "glow");
     }
     else {
+      d3.select(this).attr("class", "highlight");
       flashToggle = 0;
       flashInterval = setInterval(flashFunc, 1500);
     }
