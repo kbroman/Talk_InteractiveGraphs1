@@ -33,36 +33,36 @@
 class="gray">http://www.biostat.wisc.edu/~kbroman</a></code>
 
 <script type="text/javascript">
-var throb = d3.select("body").select("#throb");
+var throbText = d3.select("body").select("#throb");
 
-var toggle1 = 0;
-var toggle2 = 0;
+var flashToggle = 0; // when flashing, keeps track of on/off
+var stateToggle = 0; // goes between 0 (off), 1 (on) and 2 (flashing)
 
-var flashing =
+var flashFunc =
       function() {
-        throb.attr("class", function() {
-          if(toggle1==0) return "glow";
+        throbText.attr("class", function() {
+          if(flashToggle==0) return "glow";
           else return("highlight"); });
 
-        toggle1 = 1 - toggle1;
+        flashToggle = 1 - flashToggle;
       };
 
-var flash = setInterval(flashing, 1500);
+var flashInterval = setInterval(flashFunc, 1500);
 
-throb.on("click", function() {
-    if(toggle2==0) {
-      clearInterval(flash);
+throbText.on("click", function() {
+    if(stateToggle==0) {
+      clearInterval(flashInterval);
       d3.select(this).attr("class", "highlight");
     }
-    else if(toggle2==1) {
+    else if(stateToggle==1) {
       d3.select(this).attr("class", "glow");
     }
     else {
-      toggle1 = 0;
-      flash = setInterval(flashing, 1500);
+      flashToggle = 0;
+      flashInterval = setInterval(flashFunc, 1500);
     }
-    toggle2++;
-    if(toggle2 > 2) toggle2 = 0;
+    stateToggle++;
+    if(stateToggle > 2) stateToggle = 0;
 });
 </script>
 
