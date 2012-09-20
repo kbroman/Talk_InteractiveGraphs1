@@ -13,6 +13,8 @@ all: js web
 
 webmain:
 	scp index.html adhara:public_html/presentations/DynamicGraphs/
+
+webcss:
 	scp css/*.css adhara:public_html/presentations/DynamicGraphs/css/
 
 webcode:
@@ -26,4 +28,4 @@ webex:
 	scp examples/*.png adhara:public_html/presentations/DynamicGraphs/examples/
 	scp examples/*.html adhara:public_html/presentations/DynamicGraphs/examples/
 
-web: webmain webcode webex webdata
+web: webmain webcss webcode webex webdata
