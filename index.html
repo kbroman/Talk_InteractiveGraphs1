@@ -13,7 +13,7 @@
 <script src="js/d3.v2.min.js?2.7.3"></script>
 <script src="js/plotframe.js"></script>
 
-<title>Why aren't all of our graphs interactive?</title>
+<title>Why aren&rsquo;t all of our graphs interactive?</title>
 </head>
 <body class="overview">
 
@@ -22,15 +22,15 @@
 
 
 <section class="titlepage">
-<h2 class="highlight">Why aren't all of our graphs
+<h2 class="highlight">Why aren&rsquo;t all of our graphs
 <font id="flash" class="glow">interactive</font>?</h2>
 
 <h4><a href="http://www.biostat.wisc.edu/~kbroman">Karl Broman</a></h4>
 <p class="nopadding">Biostatistics &amp; Medical Informatics, University of Wisconsin
 &ndash; Madison</p>
 
-<code><a href="http://www.biostat.wisc.edu/~kbroman"
-class="gray">http://www.biostat.wisc.edu/~kbroman</a></code>
+<p class="nopadding"><code><a href="http://www.biostat.wisc.edu/~kbroman"
+class="gray">http://www.biostat.wisc.edu/~kbroman</a></code></p>
 
 <script type="text/javascript">
 var flashText = d3.select("body").select("#flash");
@@ -69,7 +69,7 @@ flashText.on("click", function() {
 });
 </script>
 
-<aside>If you click on the word "interactive", it will switch among
+<aside>If you click on the word &rdquo;interactive&ldquo;, it will switch among
 off/on/flashing.</aside>
 
 </section>
@@ -99,7 +99,7 @@ href="http://www.stat.berkeley.edu/~spector/">Phil Spector</a>.  One
 of the projects was to use <a
 href="http://homepage.cs.uiowa.edu/~luke/xls/xlispstat/">XLisp-Stat</a>
 to create an interactive plot of a density estimate, with a slider for
-bandwidth.  Why haven't I done anything like this in the subsequent 15
+bandwidth.  Why haven&rsquo;t I done anything like this in the subsequent 15
 years?  Rather than make a bunch of static plots to find a good
 bandwidth, you can play around with the one interactive plot.</aside>
 
@@ -120,7 +120,7 @@ bandwidth, you can play around with the one interactive plot.</aside>
 
 <aside>Outliers can be easily identified, with the right interactive
 plot.  In R, you can use <code>identify()</code>, but who remembers
-how to do it?  Usually, I'll say, "Hmm...I want to figure out which point has
+how to do it?  Usually, I&rsquo;ll say, "Hmm...I want to figure out which point has
 weight 1 &gt; 30 and weight 2 &lt; 25."</aside>
 
 <p class="pg">3</p></section>
@@ -147,7 +147,7 @@ weight 1 &gt; 30 and weight 2 &lt; 25."</aside>
 
   <li><font class="glow">Big Data</font>
        <ul>
-         <li>Don't just rely on summary statistics
+         <li>Don&rsquo;t just rely on summary statistics
          <li>Greatly compressed information, but with access to the details
          <li>Zoom into dense figures
          <li>More exploration, more connections
@@ -184,11 +184,11 @@ exploration of large, complex data sets.</aside>
 
 <aside>Sweave is great; I wrote <a href="http://www.rqtl.org/book">my
 book</a> entirely with Sweave.  But for routine reports, it can be a
-pain.  I've moved to asciidoc for this; it's a more readable markup
+pain.  I&rsquo;ve moved to asciidoc for this; it&rsquo;s a more readable markup
 language; I use it to produce an html report.  The greatest advantage
-is not having to worry about page breaks: it's just one long stream.
+is not having to worry about page breaks: it&rsquo;s just one long stream.
 (For example, graphs can be extremely long.)  Lots of people are
-excited about markdown with knitr, especially since it's incorporated
+excited about markdown with knitr, especially since it&rsquo;s incorporated
 within RStudio.  Markdown is like asciidoc (but even simpler).</aside>
 
 <p class="pg">5</p></section>
@@ -198,15 +198,15 @@ within RStudio.  Markdown is like asciidoc (but even simpler).</aside>
 
 <ul class=small style="margin-right:100px;">
   <li><a>We never learned how</a>
-  <li><a>It's a hassle</a>
+  <li><a>It&rsquo;s a hassle</a>
   <li><a>No consistent platform</a>
   <li><a>Journal articles are static</a> <font class="small">(and what else matters?)</font>
   <li><a>Most statisticians are still creating terrible static plots</a>
        <font class="small">(even worse, obnoxious tables)</font>
 </ul>
 
-<aside>Why aren't statisticians making interactive graphs?  Primarily
-because we've not learned how.  And it does remain somewhat difficult,
+<aside>Why aren&rsquo;t statisticians making interactive graphs?  Primarily
+because we&rsquo;ve not learned how.  And it does remain somewhat difficult,
 and there are too many options, most of them incompletely developed.
 But I think the primary reason is that journal articles are static, so
 what incentive is there to develop interactive graphics tools?  And
@@ -220,7 +220,7 @@ at all.  </aside>
 
 <ul class=small style="margin-right:100px;">
   <li><a>We never learned how</a>
-  <li><a>It's a hassle</a>
+  <li><a>It&rsquo;s a hassle</a>
   <li><a>No consistent platform</a>
   <li><a>Journal articles are static</a> <font class="small">(and what else matters?)</font>
   <li><a>Most statisticians are still creating <font class="glow">terrible</font> static plots</a>
@@ -228,7 +228,7 @@ at all.  </aside>
 </ul>
 
 <aside>I mean it!  Lots of statisticians just create crappy tables,
-because they're lazy and don't care.</aside>
+because they&rsquo;re lazy and don&rsquo;t care.</aside>
 
 <p class="pg">6</p></section>
 
@@ -290,7 +290,7 @@ data patterns with Micromaps</a>.</p>
   <li><a href="http://4dpiecharts.com/2010/10/06/creating-guis-in-r-with-gwidgets/">gWidgets</a>
   <li><a href="http://www.stats.gla.ac.uk/~adrian/rpanel/">rpanel</a>
   <li><a href="http://rforge.net/Acinonyx/">Acinonyx</a> (aka iPlots eXtreme)
-  <li><a href="http://rstudio.org/">RStudio</a>'s <code><a href="http://rstudio.org/docs/advanced/manipulate">manipulate()</a></code>
+  <li><a href="http://rstudio.org/">RStudio</a>&rsquo;s <code><a href="http://rstudio.org/docs/advanced/manipulate">manipulate()</a></code>
   <li><a href="http://gridsvg.r-forge.r-project.org">gridSVG</a>
   <li><a href="http://www.youtube.com/watch?v=iSXNfZESR5I">g(i)gplot</a>?
   <li><a href="http://code.google.com/p/google-motion-charts-with-r/">googleVis</a>
@@ -302,7 +302,7 @@ data patterns with Micromaps</a>.</p>
   href="http://had.co.nz">Hadley Wickham</a> (developer of ggplot2) is
   working on interactive graphics; he might make things easier for
   us.  The most polished interactive graphics are in javascript using
-  the D3 library (see next slide), though for now it's <font class="darkhighlight">very</font>
+  the D3 library (see next slide), though for now it&rsquo;s <font class="darkhighlight">very</font>
   low-level work.</aside>
 
 <p class="pg">12</p></section>
@@ -314,8 +314,8 @@ data patterns with Micromaps</a>.</p>
   class="gray">or <a href="http://d3js.org" class="highlight">flexible</a>?</font>
 
 
-<aside>You have to choose between easy or flexible; you can't have
-  both.  I'm going for flexible.</aside>
+<aside>You have to choose between easy or flexible; you can&rsquo;t have
+  both.  I&rsquo;m going for flexible.</aside>
 
 <p class="pg">13</p></section>
 
@@ -341,7 +341,7 @@ data patterns with Micromaps</a>.</p>
 <h3>A lot to learn</h3>
 
 <ul>
-  <li><a href="https://developer.mozilla.org/en-US/docs/HTML/HTML5">html</a> and "<a href="http://en.wikipedia.org/wiki/Document_Object_Model">The DOM</a>"
+  <li><a href="https://developer.mozilla.org/en-US/docs/HTML/HTML5">html</a> and &ldquo;<a href="http://en.wikipedia.org/wiki/Document_Object_Model">The DOM</a>&rdquo;
   <li><a href="https://developer.mozilla.org/en-US/docs/CSS">css</a>
   <li><a href="https://developer.mozilla.org/en-US/docs/SVG">svg</a>
   <li><a href="https://developer.mozilla.org/en-US/docs/JavaScript">JavaScript</a>
