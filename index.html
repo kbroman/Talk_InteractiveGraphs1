@@ -128,7 +128,7 @@ weight 1 &gt; 30 and weight 2 &lt; 25."</aside>
 
 
 <section>
-<h3>Advantages</h3>
+<h3>Opportunities</h3>
 
 <ul class=small>
   <li><font class="highlight">Exploration</font>
@@ -147,13 +147,19 @@ weight 1 &gt; 30 and weight 2 &lt; 25."</aside>
 
   <li><font class="glow">Big Data</font>
        <ul>
-         <li>Greatly compressed information, but with access to the details
          <li>Don't just rely on summary statistics
+         <li>Greatly compressed information, but with access to the details
          <li>Zoom into dense figures
          <li>More exploration, more connections
        </ul>
 
 </ul>
+
+<aside>The routine use of interactive graphics for exploratory data
+analysis seems a bit out of reach, but surely is possible.
+Incorporating such graphics in reports to our collaborators could be
+really valueable, but perhaps the greatest opportunity is for the
+exploration of large, complex data sets.</aside>
 
 <p class="pg">4</p></section>
 
@@ -176,6 +182,15 @@ weight 1 &gt; 30 and weight 2 &lt; 25."</aside>
   markdown</a> (esp. in <a href="http://www.rstudio.org" class="gray">RStudio</a>)
 </ul>
 
+<aside>Sweave is great; I wrote <a href="http://www.rqtl.org/book">my
+book</a> entirely with Sweave.  But for routine reports, it can be a
+pain.  I've moved to asciidoc for this; it's a more readable markup
+language; I use it to produce an html report.  The greatest advantage
+is not having to worry about page breaks: it's just one long stream.
+(For example, graphs can be extremely long.)  Lots of people are
+excited about markdown with knitr, especially since it's incorporated
+within RStudio.  Markdown is like asciidoc (but even simpler).</aside>
+
 <p class="pg">5</p></section>
 
 <section>
@@ -188,8 +203,16 @@ weight 1 &gt; 30 and weight 2 &lt; 25."</aside>
   <li><a>Journal articles are static</a> <font class="small">(and what else matters?)</font>
   <li><a>Most statisticians are still creating terrible static plots</a>
        <font class="small">(even worse, obnoxious tables)</font>
-
 </ul>
+
+<aside>Why aren't statisticians making interactive graphs?  Primarily
+because we've not learned how.  And it does remain somewhat difficult,
+and there are too many options, most of them incompletely developed.
+But I think the primary reason is that journal articles are static, so
+what incentive is there to develop interactive graphics tools?  And
+most statisticians are still putting little care into visualizations,
+at all.  </aside>
+
 <p class="pg">6</p></section>
 
 <section>
@@ -202,14 +225,21 @@ weight 1 &gt; 30 and weight 2 &lt; 25."</aside>
   <li><a>Journal articles are static</a> <font class="small">(and what else matters?)</font>
   <li><a>Most statisticians are still creating <font class="glow">terrible</font> static plots</a>
        <font class="small">(even worse, <font class="glow">obnoxious</font> tables)</font>
-
 </ul>
+
+<aside>I mean it!  Lots of statisticians just create crappy tables,
+because they're lazy and don't care.</aside>
+
 <p class="pg">6</p></section>
 
 <section>
 <h3>Examples from <a href="http://amstat.tandfonline.com/loi/jasa">JASA</a></h3>
 
 <div class="chart"><img src="examples/jasa_sep2012_pg460.png" width=800></div>
+
+<aside>I flipped through the Sept, 2012, issue of JASA.  There are a
+surprising number of crappy tables, and a surprising dearth of good
+figures.</aside>
 <p class="pg">7</p></section>
 
 <section>
@@ -228,9 +258,26 @@ weight 1 &gt; 30 and weight 2 &lt; 25."</aside>
 <h3>Examples from <a href="http://amstat.tandfonline.com/loi/jasa">JASA</a></h3>
 
 <div class="chart"><img src="examples/jasa_sep2012_pg798.png" height=600></div>
-<div style:"position: absolute; bottom: 0;" class="nopadding">
-<font class="gray" style="font-size:28px;">There <em><font class="highlight">are</font></em> some nice ones.</font></div>
+
+<p class="reference">
+There <em><font class="highlight">are</font></em> some nice ones.</p>
+
+<aside>Genovese et al., The geometry of nonparametric filament estimation.</aside>
 <p class="pg">10</p></section>
+
+
+<section>
+<h3>An alternative to tables</h3>
+
+<div class="chart"><img src="examples/carr_fig.png"></div>
+
+<p class="reference">
+Carr & Pickle (2010) <a
+href="http://www.amazon.com/exec/obidos/ASIN/142007573X/7210-20"><i>Visualizing
+data patterns with Micromaps</a>.</p>
+
+<aside><a href="http://statistics.gmu.edu/people_pages/carr.html">Dan Carr</a> is brilliant.</aside>
+<p class="pg">11</p></section>
 
 
 <section>
@@ -247,10 +294,18 @@ weight 1 &gt; 30 and weight 2 &lt; 25."</aside>
   <li><a href="http://gridsvg.r-forge.r-project.org">gridSVG</a>
   <li><a href="http://www.youtube.com/watch?v=iSXNfZESR5I">g(i)gplot</a>?
   <li><a href="http://code.google.com/p/google-motion-charts-with-r/">googleVis</a>
-  <li><a href="http://d3js.org">d3.js</a>
+  <li><a href="http://d3js.org">D3.js</a>
 <ul>
 
-<p class="pg">11</p></section>
+<aside>There seem to be <font class="darkhighlight">too many</font> options for producing dynamic and
+  interactive graphics.  Many are simple to use but not easily extended.  <a
+  href="http://had.co.nz">Hadley Wickham</a> (developer of ggplot2) is
+  working on interactive graphics; he might make things easier for
+  us.  The most polished interactive graphics are in javascript using
+  the D3 library (see next slide), though for now it's <font class="darkhighlight">very</font>
+  low-level work.</aside>
+
+<p class="pg">12</p></section>
 
 <section>
 <h3>Trade-offs</h3>
@@ -259,7 +314,10 @@ weight 1 &gt; 30 and weight 2 &lt; 25."</aside>
   class="gray">or <a href="http://d3js.org" class="highlight">flexible</a>?</font>
 
 
-<p class="pg">12</p></section>
+<aside>You have to choose between easy or flexible; you can't have
+  both.  I'm going for flexible.</aside>
+
+<p class="pg">13</p></section>
 
 
 
@@ -268,16 +326,38 @@ weight 1 &gt; 30 and weight 2 &lt; 25."</aside>
 <div id="sperm" class="sperm" style="position:absolution;top:0px;left:0px;width:1280px;height:960px;">
 
 <div style="position:absolute;bottom:1px;left:1px;">
-<code><a href="http://bl.ocks.org/1136236">http://bl.ocks.org/1136236</a></code></div>
+<code style="font-size:36px;"><a href="http://bl.ocks.org/1136236">http://bl.ocks.org/1136236</a></code></div>
 
-<p class="pg">13</p>
+<aside>This is one of the images that convinced me that I want to
+  learn D3.  The code is surprisingly short and easy to follow.</aside>
+
+<p class="pg">14</p>
 </div>
 <script src="js/sperm.js"></script>
 </section>
 
 
 <section>
-<h3>More <a href="http://d3js.org" class="highlight">d3.js</a> <a href="https://github.com/mbostock/d3/wiki/Gallery" class="highlight">examples</a></h3>
+<h3>A lot to learn</h3>
+
+<ul>
+  <li><a href="https://developer.mozilla.org/en-US/docs/HTML/HTML5">html</a> and "<a href="http://en.wikipedia.org/wiki/Document_Object_Model">The DOM</a>"
+  <li><a href="https://developer.mozilla.org/en-US/docs/CSS">css</a>
+  <li><a href="https://developer.mozilla.org/en-US/docs/SVG">svg</a>
+  <li><a href="https://developer.mozilla.org/en-US/docs/JavaScript">JavaScript</a>
+  <li><a href="http://coffeescript.org">CoffeeScript</a>
+  <li><a href="http://d3js.org">D3</a>
+</ul>
+
+<aside>The hardest part about learning D3 is that there are a whole pile of things that you need to understand simultaneously, and some of them are rather dull.</aside>
+
+<p class="pg">15</p></section>
+</section>
+
+
+
+<section>
+<h3>More <a href="http://d3js.org" style="color:white;">D3</a> <a href="https://github.com/mbostock/d3/wiki/Gallery" class="highlight">examples</a></h3>
 
 <ul class=tight>
   <li><a href="http://bost.ocks.org/mike/nations/">Wealth and health of nations</a>
@@ -292,37 +372,20 @@ weight 1 &gt; 30 and weight 2 &lt; 25."</aside>
 
 <aside>There are loads of cool examples on the web.</aside>
 
-<p class="pg">14</p></section>
+<p class="pg">16</p></section>
 
 </section>
 
 
 
-
-<section>
-<h3>A lot to learn</h3>
-
-<ul>
-  <li><a href="https://developer.mozilla.org/en-US/docs/HTML/HTML5">html</a> and "<a href="http://en.wikipedia.org/wiki/Document_Object_Model">The DOM</a>"
-  <li><a href="https://developer.mozilla.org/en-US/docs/CSS">css</a>
-  <li><a href="https://developer.mozilla.org/en-US/docs/SVG">svg</a>
-  <li><a href="https://developer.mozilla.org/en-US/docs/JavaScript">JavaScript</a>
-  <li><a href="http://coffeescript.org">CoffeeScript</a>
-  <li><a href="http://d3js.org">d3.js</a>
-</ul>
-
-<aside>The hardest part about learning d3 is that there are a whole pile of things that you need to understand simultaneously, and some of them are rather dull.</aside>
-
-<p class="pg">15</p></section>
-</section>
 
 
 <section>
 <h3>Acknowledgments</h3>
-  <p><a href="http://d3js.org" class="highlight">d3.js</a> and <a href="https://github.com/mbostock/stack" class="highlight">stack.js</a> by <a href="http://bost.ocks.org/mike" rel="author">Mike Bostock</a>
+  <p><a href="http://d3js.org" class="highlight">D3</a> and <a href="https://github.com/mbostock/stack" class="highlight">stack.js</a> by <a href="http://bost.ocks.org/mike" rel="author">Mike Bostock</a>
 
   <p><a href="http://alignedleft.com/tutorials/d3"
-  class="highlight">d3 tutorials</a> by <a href="http://alignedleft.com">Scott Murray</a>
+  class="highlight">D3 tutorials</a> by <a href="http://alignedleft.com">Scott Murray</a>
 
   <p><a href="http://coffeescript.org" class="highlight">CoffeeScript</a> by <a
   href="https://github.com/jashkenas">Jeremy Ashkenas</a>
@@ -333,7 +396,7 @@ weight 1 &gt; 30 and weight 2 &lt; 25."</aside>
   <p><a href="http://pragprog.com/book/tbcoffee/coffeescript"
   class="highlight"><i>CoffeeScript</i> book</a> by <a href="http://trevorburnham.com">Trevor Burnham</a>
 
-<p class="pg">16</p></section>
+<p class="pg">17</p></section>
 
 <script src="js/stack.v0.js"></script>
 </body>

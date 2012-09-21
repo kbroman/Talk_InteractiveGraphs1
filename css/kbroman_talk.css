@@ -25,6 +25,10 @@ a.gray {
 }
 
 
+aside a {
+  color: #06f;
+}
+
 
 font.gray {
   color: #969696;
@@ -139,6 +143,10 @@ code.small {
    font-size: 24px;
  }
 
+.darkhighlight {
+  color: #ff0099;
+}
+
 .highlight {
   color: rgb(125,250,125);
 }
@@ -174,5 +182,16 @@ p.codelink {
   position:absolute;
   bottom:3px;
   left: 3px;
+  margin-left: 40px;
   font-size: 18px;
 }
+
+p.reference {
+  color: rgb(100,100,100);
+  position:absolute;
+  bottom:3px;
+  left: 3px;
+  margin-left: 40px;
+  font-size: 28px;
+}
+
