@@ -13,7 +13,7 @@ index_presentation.html: index.html js css/kbroman_talk.css css/kbroman_presenta
 	Perl/create_presentation.pl
 
 webmain:
-	scp index.html adhara:public_html/presentations/DynamicGraphs/
+	scp index*.html adhara:public_html/presentations/DynamicGraphs/
 
 webcss:
 	scp css/*.css adhara:public_html/presentations/DynamicGraphs/css/
