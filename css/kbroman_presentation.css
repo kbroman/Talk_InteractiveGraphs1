@@ -6,3 +6,8 @@ aside {
 section aside:hover {
   opacity: 0;
 }
+
+a {
+  text-decoration: none;
+  border-bottom: none;
+}
