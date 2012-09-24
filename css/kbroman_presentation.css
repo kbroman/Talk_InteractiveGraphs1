@@ -1,0 +1,8 @@
+/* makes the notes disappear */
+aside {
+  opacity: 0;
+}
+
+section aside:hover {
+  opacity: 0;
+}

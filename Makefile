@@ -9,7 +9,8 @@ js/scatterplot.js: coffee/scatterplot.coffee
 js/density.js: coffee/density.coffee
 	coffee -bco js coffee
 
-all: js web
+index_presentation.html: index.html js css/kbroman_talk.css css/kbroman_presentation.css
+	Perl/create_presentation.pl
 
 webmain:
 	scp index.html adhara:public_html/presentations/DynamicGraphs/
@@ -29,3 +30,5 @@ webex:
 	scp examples/*.html adhara:public_html/presentations/DynamicGraphs/examples/
 
 web: webmain webcss webcode webex webdata
+
+all: js web index_presentation.html
