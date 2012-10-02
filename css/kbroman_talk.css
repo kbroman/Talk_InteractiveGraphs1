@@ -30,6 +30,16 @@ aside a {
   color: #06f;
 }
 
+a.invisiblelink {
+  text-decoration: none;
+  border-bottom: none;
+  opacity: 0;
+  color: #969696;
+}
+
+a.invisiblelink:hover {
+  opacity: 1;
+}
 
 
 

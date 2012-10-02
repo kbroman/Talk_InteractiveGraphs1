@@ -12,6 +12,10 @@ while($line = <IN>) {
         $line =~ s/\/\* //;
         $line =~ s/ \*\///;
     }
+    if($line =~ /invisiblelink/) {
+        $line =~ s/\<\!\-\-//;
+        $line =~ s/\-\-\>//;
+    }
     print OUT "$line\n";
 }
 
