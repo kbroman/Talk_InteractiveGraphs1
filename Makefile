@@ -9,7 +9,7 @@ js/scatterplot.js: coffee/scatterplot.coffee
 js/density.js: coffee/density.coffee
 	coffee -bco js coffee
 
-index_presentation.html: index.html js css/kbroman_talk.css css/kbroman_presentation.css
+presentation.html: index.html js css/kbroman_talk.css css/kbroman_presentation.css
 	Perl/create_presentation.pl
 
 webmain:
@@ -31,4 +31,4 @@ webex:
 
 web: webmain webcss webcode webex webdata
 
-all: js web index_presentation.html
+all: js web presentation.html

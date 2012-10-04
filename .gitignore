@@ -8,4 +8,4 @@ js/scatterplot.js
 js/density.js
 examples/*.png
 examples/clean_genotypes.*
-index_presentation.html
+presentation.html

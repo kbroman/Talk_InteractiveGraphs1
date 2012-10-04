@@ -2,7 +2,7 @@
 # create version without the notes (by commenting out link with "kbroman_presentation.css")
 
 $ifile = "index.html";
-$ofile = "index_presentation.html";
+$ofile = "presentation.html";
 open(IN, $ifile) or die("Cannot read from $ifile");
 open(OUT, ">$ofile") or die("Cannot write to $ofile");
 
