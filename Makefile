@@ -1,3 +1,5 @@
+mainstuff: js presentation.html examples/manyboxplots.png
+
 js: js/plotframe.js js/scatterplot.js js/density.js
 
 js/plotframe.js: coffee/plotframe.coffee
@@ -8,6 +10,9 @@ js/scatterplot.js: coffee/scatterplot.coffee
 
 js/density.js: coffee/density.coffee
 	coffee -bco js coffee
+
+examples/manyboxplots.png: R/hypo_boxplot.R
+	cd R;R CMD BATCH hypo_boxplot.R
 
 presentation.html: index.html js css/kbroman_talk.css css/kbroman_presentation.css
 	Perl/create_presentation.pl

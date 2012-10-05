@@ -9,3 +9,4 @@ js/density.js
 examples/*.png
 examples/clean_genotypes.*
 presentation.html
+*.Rout
