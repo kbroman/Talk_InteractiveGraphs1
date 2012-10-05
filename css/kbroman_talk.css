@@ -87,6 +87,15 @@ ul.tight li {
   margin-bottom: 14px;
 }
 
+ul.reallytight {
+  font-size: 32px;
+  color: #969696;
+}
+
+ul.reallytight li {
+  margin-bottom: 10px;
+}
+
 li li {
   margin-bottom: 8px;
 }
