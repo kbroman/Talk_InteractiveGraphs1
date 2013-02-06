@@ -3,6 +3,6 @@ Safari in presentation mode:
 
   click View -> enter fullscreen (or cntl-cmd-f)
 
-  then right-click on top menu bar and select "high toolbar"
+  then right-click on top menu bar and select "hide toolbar"
 
   ESC to exit
