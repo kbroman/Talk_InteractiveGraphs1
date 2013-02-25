@@ -33,11 +33,11 @@ var head = g.append("svg:ellipse")
     .attr("ry", 4);
 
 g.append("svg:path")
-    .map(function(d) { return d.path.slice(0, 3); })
+    .datum(function(d) { return d.path.slice(0, 3); })
     .attr("class", "sperm_mid");
 
 g.append("svg:path")
-    .map(function(d) { return d.path; })
+    .datum(function(d) { return d.path; })
     .attr("class", "sperm_tail");
 
 var tail = g.selectAll("path");
