@@ -18,21 +18,21 @@ presentation.html: index.html js css/kbroman_talk.css css/kbroman_presentation.c
 	Perl/create_presentation.pl
 
 webmain:
-	scp index.html presentation.html adhara:public_html/presentations/InteractiveGraphs/
+	scp index.html presentation.html broman-6:public_html/presentations/InteractiveGraphs/
 
 webcss:
-	scp css/*.css adhara:public_html/presentations/InteractiveGraphs/css/
+	scp css/*.css broman-6:public_html/presentations/InteractiveGraphs/css/
 
 webcode:
-	scp js/*.js adhara:public_html/presentations/InteractiveGraphs/js/
-	scp coffee/*.coffee adhara:public_html/presentations/InteractiveGraphs/coffee/
+	scp js/*.js broman-6:public_html/presentations/InteractiveGraphs/js/
+	scp coffee/*.coffee broman-6:public_html/presentations/InteractiveGraphs/coffee/
 
 webdata:
-	scp data/*.json adhara:public_html/presentations/InteractiveGraphs/data/
+	scp data/*.json broman-6:public_html/presentations/InteractiveGraphs/data/
 
 webex:
-	scp examples/*.png adhara:public_html/presentations/InteractiveGraphs/examples/
-	scp examples/*.html adhara:public_html/presentations/InteractiveGraphs/examples/
+	scp examples/*.png broman-6:public_html/presentations/InteractiveGraphs/examples/
+	scp examples/*.html broman-6:public_html/presentations/InteractiveGraphs/examples/
 
 web: webmain webcss webcode webex webdata
 
