@@ -3,13 +3,13 @@ mainstuff: js presentation.html examples/manyboxplots.png
 js: js/plotframe.js js/scatterplot.js js/density.js
 
 js/plotframe.js: coffee/plotframe.coffee
-	coffee -bco js coffee
+	coffee -bco js coffee/plotframe.coffee
 
 js/scatterplot.js: coffee/scatterplot.coffee
-	coffee -bco js coffee
+	coffee -co js coffee/scatterplot.coffee
 
 js/density.js: coffee/density.coffee
-	coffee -bco js coffee
+	coffee -co js coffee/density.coffee
 
 examples/manyboxplots.png: R/hypo_boxplot.R
 	cd R;R CMD BATCH hypo_boxplot.R
